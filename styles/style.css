@@ -310,7 +310,7 @@ html {
 }
 
 .footer {
-  padding: 0 50px 88px;
+  padding: 0 50px;
   display: grid;
   grid-template-columns: 426px 149px 425px;
 }
