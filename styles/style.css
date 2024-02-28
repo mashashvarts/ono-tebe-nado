@@ -97,6 +97,7 @@ html {
   padding: 165px 51px 135px;
   gap: 20px;
   z-index: 1;
+  position: relative;
 }
 
 .text-align-center {
@@ -136,6 +137,8 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px 51px 78px;
+  position: relative;
+  z-index: 1;
 }
 
 .bet-button {
