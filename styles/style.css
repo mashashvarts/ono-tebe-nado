@@ -1,3 +1,4 @@
+
 html {
   scroll-behavior: smooth;
 }
@@ -9,7 +10,7 @@ html {
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
-  padding: 92px 24px 92px;
+  padding: 92px 24px;
   align-items: center;
   color: #000;
 }
@@ -28,23 +29,20 @@ html {
   letter-spacing: 0.01em;
 }
 
-.header-links-item-no-bullet {
+.header-links-item-no--bullet {
   list-style: none;
   letter-spacing: 0em;
-  text-decoration: none;
   margin-left: 0;
 }
 
-.header-links-item_lots {
+.header-menu-link {
   text-decoration: underline;
   text-underline-position: under;
   padding-left: 4px;
 }
 
-.header-links-item_auction {
-  padding-left: 5px;
-  text-decoration: underline;
-  text-underline-position: under;
+.header-menu-link--active {
+  text-decoration: none;
 }
 
 .header-logo {
@@ -58,59 +56,57 @@ html {
 }
 
 .header-address {
-  padding: 5px 29px 2px 186px;
   font-style: normal;
   align-self: start;
   letter-spacing: 0.01em;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.35;
+  justify-self: end;
+  max-width: 236px;
+  margin-right: 29px;
+  padding-top: 6px;
 }
 
-.header-address-tel {
+.address-link {
   text-decoration: underline;
   text-underline-position: under;
 }
 
-.header-address-mail {
-  text-decoration: underline;
-  text-underline-position: under;
-}
-
-.header-address-map {
+.address-map {
   letter-spacing: 0;
 }
 
 .cover {
   position: relative;
-  height: 758px;
   margin-bottom: 179px;
+  background-image: url(../images/cover.jpg);
+  background-size: cover;
+  background-position: bottom;
 }
 
 .cover-title {
-  position: absolute;
   font-weight: 700;
   font-size: 100px;
-  line-height: 1;
+  line-height: 1.15;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: #fff;
   display: flex;
   flex-direction: column;
-  height: 355px;
-  width: 1000px;
-  margin: 173px 51px 230px;
-  gap: 16px;
+  padding: 165px 51px 135px;
+  gap: 20px;
+  z-index: 1;
 }
 
 .text-align-center {
   align-self: center;
-  padding-top: 11px;
-  padding-bottom: 5px;
+  line-height: 1;
 }
 
 .text-align-right {
   align-self: flex-end;
+  line-height: 1;
 }
 
 .letter-spacing-zero {
@@ -122,8 +118,6 @@ html {
 }
 
 .cover-description-text {
-  position: absolute;
-  padding: 667px 385px 62px 80px;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 22px;
@@ -137,8 +131,14 @@ html {
   letter-spacing: 1.1em;
 }
 
+.cover-description-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px 51px 78px;
+}
+
 .bet-button {
-  position: absolute;
   background-color: transparent;
   width: 256px;
   height: 51px;
@@ -148,20 +148,12 @@ html {
   text-align: center;
   color: #fff;
   border-color: #fff;
-  margin: 655px 50px 51px 794px;
-}
-
-.cover-image {
-  object-fit: cover;
-  height: 758px;
-  z-index: -1;
 }
 
 .overlay {
   position: absolute;
   background-color: rgb(0 0 0 / 0.6);
-  height: 100%;
-  width: 100%;
+  inset: 0;
 }
 
 .lots {
@@ -181,17 +173,21 @@ html {
   list-style: none;
   display: flex;
   gap: 25px;
+  flex-wrap: wrap;
 }
 
 .card {
   display: flex;
-  height: 563px;
-  width: 334px;
+  min-height: 563px;
+  max-width: 334px;
   position: relative;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .card-title {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
   font-weight: 700;
   font-size: 22px;
   line-height: 1.2;
@@ -204,22 +200,20 @@ html {
 }
 
 .card-text {
-  position: absolute;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.2;
   color: #fff;
-  align-self: flex-end;
   padding: 0 40px 48px;
   z-index: 1;
 }
 
-.card-lot-01,
-.card-lot-02,
-.card-lot-03 {
-  position: relative;
+.card-lot-image {
+  position: absolute;
   object-fit: cover;
   z-index: -1;
+  inset: 0;
+  height: 100%;
 }
 
 .lots-look-more-link {
@@ -243,10 +237,10 @@ html {
   flex-direction: column;
 }
 
-.about-column-logo {
+.about-column--logo {
   padding: 37px 0 0 47px;
 }
-.about-column-text {
+.about-column--text {
   gap: 24px;
 }
 
@@ -257,7 +251,7 @@ html {
   height: 240px;
   width: 240px;
   background-color: #000;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 
 .about-logo-image {
@@ -274,19 +268,15 @@ html {
   padding-top: 138px;
 }
 
-.about-text-first {
+.about-text {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0.01em;
   color: #000;
 }
 
-.about-text-second {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.2;
-  color: #000;
+.about-text-first {
+  letter-spacing: 0.01em;
 }
 
 .letter-spacing-about-two {
@@ -324,22 +314,8 @@ html {
   padding: 0 186px 0 0;
 }
 
-.footer-address-tel {
-  text-decoration: underline;
-  text-underline-position: under;
-  letter-spacing: 0.01em;
-}
-
-.footer-adress-mail {
-  text-decoration: underline;
-  text-underline-position: under;
-  letter-spacing: 0.01em;
-}
-
 .footer-menu {
-  display: flex;
   text-align: center;
-  flex-wrap: nowrap;
 }
 
 .footer-links-list {
@@ -356,14 +332,16 @@ html {
   text-decoration: underline;
 }
 
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  min-width: 149px;
+}
+
 .footer-links-item {
   list-style: none;
   letter-spacing: 0em;
   margin-left: 0;
-}
-
-.footer-social {
-  padding: 1px 0 49px 185px;
 }
 
 .footer-social-list {
@@ -371,10 +349,10 @@ html {
   justify-content: space-between;
   list-style: none;
   padding-bottom: 49px;
+  padding: 1px 0 49px 185px;
 }
 
 .footer-social-icon {
   height: 48px;
   width: 48px;
 }
-

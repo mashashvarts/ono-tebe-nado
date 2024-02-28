@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -13,13 +14,13 @@
     <header class="header">
       <nav class="header-menu">
         <ul class="header-links-list">
-          <li class="header-links-item header-links-item-no-bullet">
-            <a class="header-menu-link">главная</a>
+          <li class="header-links-item header-links-item--no-bullet">
+            <a class="header-menu-link--active">главная</a>
           </li>
-          <li class="header-links-item header-links-item_lots">
+          <li class="header-links-item">
             <a class="header-menu-link" href="#lots-1">посмотреть лоты</a>
           </li>
-          <li class="header-links-item header-links-item_auction">
+          <li class="header-links-item">
             <a class="header-menu-link" href="#about-2">об аукционе</a>
           </li>
         </ul>
@@ -31,10 +32,10 @@
         alt='Черный логотип "Оно тебе надо"'
         />
       </a>
-      <address class="header-address">
-        <a class="header-address-tel" href="tel:+99995555555">+9 999 555 5555</a><br>
-        <a class="header-address-mail" href="mailto:info@sobaka.ge">info@sobaka.ge</a><br>
-        <p class="header-address-map">наб. Принсенграхт 263-265, Амстердам</p>
+      <address class="address header-address">
+        <a class="address-link" href="tel:+99995555555">+9 999 555 5555</a><br>
+        <a class="address-link" href="mailto:info@sobaka.ge">info@sobaka.ge</a><br>
+        <p class="address-map">наб. Принсенграхт 263-265, Амстердам</p>
       </address>
     </header>
     <main class="main">
@@ -42,16 +43,13 @@
         <div class="overlay"></div> 
        <h1 class="cover-title">
           <span class="text-align">о<span class="letter-spacing-extended">но</span></span> 
-          <span class="text-align-center">те<span class="letter-spacing-extended">бе</span></span> 
-          <span class="text-align-right"><span class="letter-spacing-extended">н</span>ад<span class="letter-spacing-zero">о</span></span>
+          <span class="text-align-center">те<span class="text-align-center letter-spacing-extended">бе</span></span> 
+          <span class="text-align-right"><span class="text-align-right letter-spacing-extended">н</span>ад<span class="text-align-right letter-spacing-zero">о</span></span>
         </h1>
-          <p class="cover-description-text">Аукцион вещей, <span class="cover-letter-spacing-expended">в</span>которые никто не верил</p>
-        <button class="bet-button">Сделать ставку</button>
-        <img 
-        class="cover-image"
-        src="./images/cover.jpg"
-        alt="Картина цветов"
-      />
+          <div class="cover-description-container">
+            <p class="cover-description-text">Аукцион вещей, <span class="cover-letter-spacing-expended">в</span>которые никто не верил</p>
+            <button type="button" class="bet-button">Сделать ставку</button>
+          </div>
     </section>
       <section id="lots-1" class="lots">
         <h2 class="lots-heading">Лоты</h2>
@@ -60,7 +58,7 @@
             <a class="card-link" href="#0">
               <article class="card">
                 <img 
-                  class="card-lot-01"
+                  class="card-lot-image"
                   src="./images/card-lot-01.jpg"
                   alt="Две руки на фоне поля"  /> 
                 <h3 class="card-title">Фильм режиссёра, который бросил киношколу</h3>
@@ -73,7 +71,7 @@
             <a class="card-link" href="#0">
               <article class="card">
                 <img 
-                class="card-lot-02"
+                class="card-lot-image"
                 src="./images/card-lot-02.jpg"
                 alt="Обложка книги 'Улисс' Джеймса Джойса" />
                 <h3 class="card-title">Книга, где описан один скучный день из жизни рекламного агента</h3>
@@ -87,7 +85,7 @@
           <a class="card-link" href="#0">
             <article class="card">
               <img
-                class="card-lot-03"
+                class="card-lot-image"
                 src="./images/card-lot-03.jpg"
                 alt="Яркая абстракция" />
                 <h3 class="card-title">Картина, которую повторит даже 5-летний сын маминой подруги</h3>
@@ -100,7 +98,7 @@
         <a class="lots-look-more-link" href="#0">посмотреть больше</a>
       </section>
       <section class="about" id="about-2">
-        <div class="about-column about-column-logo">
+        <div class="about-column about-column--logo">
           <div class="about-logo">
             <img 
             class="about-logo-image"
@@ -108,19 +106,19 @@
             alt='Белый логотип "Оно тебе надо"'/>
           </div>
         </div>
-       <div class="about-column about-column-text">
+       <div class="about-column about-column--text">
           <h2 class="about-title">Об аукционе</h2>
-          <p class="about-text-first">Здесь вы не встретите очередное <span class="letter-spacing-zero">пафосное собрание невероятно дорогого антиквариата. </span><span class="letter-spacing-about-two">Наши</span> лоты вообще не <span class="letter-spacing-zero">должны</span> <span class="letter-spacing-about-minus-one">были попасть </span><span class="letter-spacing-zero">ни на один </span>аукцион.<span class="letter-spacing-zero"> Потому что кому нужен </span><span class="letter-spacing-about-three">дневник</span> <span class="letter-spacing-zero">девочки-подростка или картина, которую может </span><span class="letter-spacing-about-two">нарисовать</span> даже <span class="letter-spacing-zero">ребёнок? Кому нужны </span>все эти странные вещи, созданные <span class="letter-spacing-zero">любителями?</span></p>
-          <p class="about-text-second">Слишком сложные или, наоборот, слишком простые. Опережающие своё время. В пух и прах растерзанные критиками. Непринятые и непонятые. Когда-то <span class="letter-spacing-about-four">они</span> казались просто <span class="letter-spacing-about-one">неудачными</span>. Но, несмотря
+          <p class="about-text about-text-first">Здесь вы не встретите очередное <span class="letter-spacing-zero">пафосное собрание невероятно дорогого антиквариата. </span><span class="letter-spacing-about-two">Наши</span> лоты вообще не <span class="letter-spacing-zero">должны</span> <span class="letter-spacing-about-minus-one">были попасть </span><span class="letter-spacing-zero">ни на один </span>аукцион.<span class="letter-spacing-zero"> Потому что кому нужен </span><span class="letter-spacing-about-three">дневник</span> <span class="letter-spacing-zero">девочки-подростка или картина, которую может </span><span class="letter-spacing-about-two">нарисовать</span> даже <span class="letter-spacing-zero">ребёнок? Кому нужны </span>все эти странные вещи, созданные <span class="letter-spacing-zero">любителями?</span></p>
+          <p class="about-text about-text-second">Слишком сложные или, наоборот, слишком простые. Опережающие своё время. В пух и прах растерзанные критиками. Непринятые и непонятые. Когда-то <span class="letter-spacing-about-four">они</span> казались просто <span class="letter-spacing-about-one">неудачными</span>. Но, несмотря
             на критику, кажущуюся простоту или сложность, сейчас без этих лотов невозможно <span class="letter-spacing-about-one">представить современную культуру. </span>Когда в эти вещи не верил никто, продолжали верить <span class="letter-spacing-about-one">их создатели.</span> И сейчас эти лоты стали культовыми. </p>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <address class="footer-address">
-        <a class="footer-address-tel" href="tel:+99995555555">+9 999 555 5555</a><br>
-        <a class="footer-address-mail" href="mailto:info@sobaka.ge">info@sobaka.ge</a><br>
-        <p class="footer-address-map">наб. Принсенграхт 263-<br>265, Амстердам</p>
+      <address class="address footer-address">
+        <a class="address-link" href="tel:+99995555555">+9 999 555 5555</a><br>
+        <a class="address-link" href="mailto:info@sobaka.ge">info@sobaka.ge</a><br>
+        <p class="address-map">наб. Принсенграхт 263-<br>265, Амстердам</p>
       </address>
       <nav class="footer-menu">
         <ul class="footer-links-list">
@@ -135,7 +133,6 @@
           </li>
         </ul>
       </nav>
-      <div class="footer-social">
         <ul class="footer-social-list">
           <li class="footer-social-list-item">
             <a class="footer-social-link" href="#0"><img 
@@ -159,7 +156,6 @@
             </a>
           </li>
         </ul>
-      </div>
     </footer>
   </body>
 </html>
