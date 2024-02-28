@@ -322,6 +322,9 @@ html {
   list-style: none;
   font-size: 18px;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  min-width: 149px;
 }
 
 .footer-menu-link-no-decoration {
@@ -330,12 +333,6 @@ html {
 
 .footer-menu-link {
   text-decoration: underline;
-}
-
-.footer-links-list {
-  display: flex;
-  flex-direction: column;
-  min-width: 149px;
 }
 
 .footer-links-item {
